@@ -13,6 +13,13 @@ Scenes = {}
 OldSceneName = ""
 GamePaused = false
 
+function love.filedropped(file)
+    if CurrentScene.name ~= "Main Menu" then return end
+    local loadMapButton = CurrentScene.mainMenu.UIComponent.loadMapButton
+    --if not loadMapButton.awaitingFile then return end
+    loadMapButton.openDroppedMap(file)
+end
+
 function love.mousemoved()
     InputManager:setInputTypeTo("keyboard")
 end

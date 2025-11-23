@@ -1,3 +1,4 @@
+local json = require("engine.lib.json")
 local buttonEvents = require("game.button_clickevents")
 
 local mainMenu = ENGINE_COMPONENTS.scriptComponent.new()
@@ -18,6 +19,8 @@ local function setupUI(ui)
             position = {100, 190};
             hoverEvent = buttonEvents.redHover;
             unhoverEvent = buttonEvents.redUnhover;
+            clickEvent = function()
+            end;
         }
     )
     ui.loadMapButton = ui:newTextButton(
@@ -27,8 +30,18 @@ local function setupUI(ui)
             position = {100, 240};
             hoverEvent = buttonEvents.redHover;
             unhoverEvent = buttonEvents.redUnhover;
+            clickEvent = function(element)
+                if element.awaitingFile then return end
+                element.buttonText = "Please drag and drop the map file to the window..."
+                element.awaitingFile = true
+            end;
         }
     )
+    ui.loadMapButton.awaitingFile = false
+    ui.loadMapButton.openDroppedMap = function(file)
+        file:open("r")
+        local map = json.decode(file:read())
+    end
     ui.quitButton = ui:newTextButton(
         {
             textFont = "big_hot";
