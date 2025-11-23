@@ -13,3 +13,5 @@ Here is a simple roadmap I just thought of for this project:
 4. Interface for changing attributes of objects, saving/loading, conversion to JSON and vice versa
 5. Other improvements to the mapEditor
 6. Build of the project and release
+
+https://www.dafont.com/big-shot.font -> modify the "t", the bottom part is ugly. Might add turkish characters as well if I happen to switch from disposable droid, since that one is not royalty free.

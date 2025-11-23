@@ -1,0 +1,9 @@
+{
+    "name": "Main Menu",
+    "backgroundColor": [0, 0, 0],
+    "tree": [
+        ["camera", []],
+        ["mainMenu", ["UIComponent", "game/components/ui/main_menu"]]
+    ],
+    "assets": {}
+}

@@ -3,6 +3,6 @@
     "author": "polaritynord",
     "version": "1.0",
     "versionState": "release",
-    "startScene": "game/assets/scenes/empty_scene.json",
+    "startScene": "game/assets/scenes/main_menu.json",
     "icon": null
 }

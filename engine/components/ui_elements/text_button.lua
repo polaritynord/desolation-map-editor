@@ -18,7 +18,7 @@ function textButton.new()
         hoverEvent = buttonEvents.defaultHoverEvent;
         unhoverEvent = buttonEvents.defaultUnhoverEvent;
         bindedKey = nil;
-        textFont = "disposable-droid";
+        textFont = "roboto-regular";
         enabled = true;
         begin = "left";
     }
@@ -37,7 +37,7 @@ function textButton.new()
         --fixed it just by adding the cursor object to the intro despite not needing to. Might be better ways,
         --but this does the job.
         
-        --Check for controller selection
+        --[[Check for controller selection (COMMENTED ON POLARITY ENGINE: ONLY EXISTS IN DESOLATION.)
         local cursorUI = CurrentScene.cursor.UIComponent
         if InputManager.inputType == "joystick" and cursorUI.controllerCurrentMenu ~= nil then
             local selectedButton = cursorUI.controllerCurrentMenu.controllerButtons[cursorUI.controllerSelection]
@@ -47,6 +47,7 @@ function textButton.new()
                 if self.unhoverEvent then self.unhoverEvent(self) end
             end
         end
+        ]]--
         --Check for mouse touch
         if InputManager.inputType ~= "keyboard" then return end
         if my > pos[2] and my < pos[2] + self.buttonTextSize and mx > pos[1] and mx < pos[1] + 200 then
@@ -63,7 +64,7 @@ function textButton.new()
     function instance:draw()
         local pos = coreFuncs.getRelativeElementPosition(self.position, self.parentComp)
         love.graphics.setColor(self.color[1], self.color[2], self.color[3], self.color[4]*self.parentComp.alpha)
-        SetFont("desolation/assets/fonts/" .. self.textFont .. ".ttf", self.buttonTextSize)
+        SetFont(GAME_DIRECTORY .. "/assets/fonts/" .. self.textFont .. ".ttf", self.buttonTextSize)
         love.graphics.printf(
             self.buttonText, pos[1]+self.hoverOffset, pos[2], 1000, self.begin,
             0, self.scale[1], self.scale[2]
