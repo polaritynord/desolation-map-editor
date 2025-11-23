@@ -41,6 +41,7 @@ local function setupUI(ui)
     ui.loadMapButton.openDroppedMap = function(file)
         file:open("r")
         local map = json.decode(file:read())
+        --switch to map editing scene from here.
     end
     ui.quitButton = ui:newTextButton(
         {

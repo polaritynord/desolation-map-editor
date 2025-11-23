@@ -1,0 +1,9 @@
+{
+    "name": "Map Editor",
+    "backgroundColor": [0, 0, 0],
+    "tree": [
+        ["camera", ["game/components/camera_controller"]],
+        ["blob", ["imageComponent"]]
+    ],
+    "assets": {}
+}

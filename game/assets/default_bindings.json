@@ -1,7 +1,12 @@
 {
     "keyboard": [
         ["fullscreen", "f11"],
-        ["screenshot", "f12"]
+        ["screenshot", "f12"],
+        ["camera_up", "w"],
+        ["camera_down", "s"],
+        ["camera_right", "d"],
+        ["camera_left", "a"],
+        ["sprint_type_shit", "lshift"]
     ],
 
     "joystick": [

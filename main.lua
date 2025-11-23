@@ -26,6 +26,11 @@ end
 
 function love.wheelmoved(_, y)
     InputManager:setInputTypeTo("keyboard")
+    if CurrentScene.name ~= "Map Editor" then return end
+    local camera = CurrentScene.camera
+    camera.zoom = CurrentScene.camera.zoom + y*0.67
+    if camera.zoom > 3 then camera.zoom = 3 end
+    if camera.zoom < 0.5 then camera.zoom = 0.5 end
 end
 
 function love.keypressed(key, unicode)
