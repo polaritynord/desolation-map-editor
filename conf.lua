@@ -31,7 +31,7 @@ end
 
 function love.conf(t)
     t.window.width = 960 ; t.window.height = 540
-    t.window.title = "Polarity Engine"
+    t.window.title = "DESOLATION Map Editor"
     if table.contains(arg, "--no-vsync") then t.window.vsync = 0 end
     t.window.icon = "engine/assets/icon.png"
     t.console = true

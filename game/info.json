@@ -1,6 +1,6 @@
 {
-    "name": "game",
-    "author": "AUTHOR_NAME",
+    "name": "DESOLATION Map Editor",
+    "author": "polaritynord",
     "version": "1.0",
     "versionState": "release",
     "startScene": "game/assets/scenes/empty_scene.json",

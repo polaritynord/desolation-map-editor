@@ -1,12 +1,15 @@
-# Polarity Engine
+![Banner](https://i.ibb.co/H5W8Wpw/newbanner.png)
+# DESOLATION Map Editor
 
-**Polarity Engine** is built on top of Lua/Love2D, and is designed to make 2D games with ease using its built-in features such as Scenes, Particles, UI, Components and Objects.
+A map editor project I am working on that runs on Polarity Engine and provides a easy-to-use interface for making maps for [DESOLATION](https://polaritynord.itch.io/desolation). The DESOLATION repository currently has a mapEditor directory which works as a separate Love2D project which I used to create the first two maps, but if I am being honest, that is more of a "mapViewer" than an editor.
 
-It is, as of now, primarily being used and updated through the project [DESOLATION](https://github.com/polaritynord/desolation). This repository, once it is fully prepared of course, will be updated every now and then to catch up with DESOLATION's updated form of it, so if you want, you can also clone DESOLATION and use the engine there as well.
+I've come to the conclusion that if I want to work more on DESOLATION, I have to focus on the campaign of the game. That means more maps have to be created following a proper story, and because of that, I need a good enough map editor in my possession to design the maps without having to modify a JSON file by hand.
 
-Documentation on the engine's usage and features will be written later.
+Here is a simple roadmap I just thought of for this project:
 
-### Included libraries:
-* JSON - https://github.com/rxi/json.lua
-* Lighter - https://github.com/speakk/lighter
-* Moonshine - https://github.com/vrld/moonshine
+1. Main menu (load a map file, create a new one, perhaps shortcut for running the map in-game)
+2. Map viewing, simple controls, a tree showing the items, walls, props etc. in the map
+3. Lighting implementation(?), might not be added here for now
+4. Interface for changing attributes of objects, saving/loading, conversion to JSON and vice versa
+5. Other improvements to the mapEditor
+6. Build of the project and release
